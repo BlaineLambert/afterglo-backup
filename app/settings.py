@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'afterglo',  # Replace with your actual database name
+        'USER': 'afterglo',      # Replace with your PostgreSQL username
+        'PASSWORD': 'afterglo',  # Replace with your PostgreSQL password
+        'HOST': 'localhost',     # Replace with your PostgreSQL host
+        'PORT': '',              # Leave empty for default port
     }
 }
 
