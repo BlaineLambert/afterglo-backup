@@ -13,3 +13,6 @@ class ListProduct(ModelForm):
     class Meta:
         model = Product
         fields = ['name', 'price', 'photo', 'desc']
+
+class Chatbot_Form(forms.Form):
+    user_input = forms.CharField()
