@@ -1,4 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div class="flex justify-center">
+  <div class="grid grid-cols-3 gap-4">
+    {% for product in products %}
+    <section class="bg-red-200 max-w-xs m-2 align-top max-h-64 text-center text-xl p-4 m-10 grid grid-rows-4 break-words rounded-md shadow-md whitespace-normal font-mono">
+        <div class="flex flex-col items-center justify-evenly">
+            <img src="{{ product.photo.url }}" alt="image">
+            <p>{{ product.name }}</p>
+            <p>{{ product.price }}</p>
+            <p>{{ product.desc }}</p>
+        </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>
 {% endblock content %}
