@@ -35,3 +35,8 @@ def testing(request:HttpRequest) -> HttpResponse:
     users = User.objects.all()
     context = {'form1': form1, 'form2': form2, 'products': products, 'users': users}
     return render(request, "test.html", context)
+
+def products(request):
+    products = Product.objects.all()
+    context = {'products': products}
+    return render(request, "products.html", context)
