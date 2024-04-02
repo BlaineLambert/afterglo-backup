@@ -678,10 +678,6 @@ video {
   height: 9rem;
 }
 
-.h-4\/5 {
-  height: 80%;
-}
-
 .h-6 {
   height: 1.5rem;
 }
@@ -710,6 +706,7 @@ video {
   max-width: 80rem;
 }
 
+<<<<<<< HEAD
 .max-w-xs {
   max-width: 20rem;
 }
@@ -724,6 +721,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+=======
+.flex-wrap {
+  flex-wrap: wrap;
+>>>>>>> 6e7b0b8c27adc05ad00a467ea506a5d95e6d4c9b
 }
 
 .items-center {
@@ -774,6 +775,11 @@ video {
   border-radius: 0.375rem;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -794,20 +800,30 @@ video {
   background-color: rgb(204 251 241 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
-.p-20 {
-  padding: 5rem;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
 }
 
+<<<<<<< HEAD
 .p-4 {
   padding: 1rem;
+=======
+.p-5 {
+  padding: 1.25rem;
+>>>>>>> 6e7b0b8c27adc05ad00a467ea506a5d95e6d4c9b
 }
 
 .px-2 {
@@ -825,9 +841,19 @@ video {
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-5 {
@@ -845,6 +871,7 @@ video {
 
 .text-center {
   text-align: center;
+<<<<<<< HEAD
 }
 
 .align-top {
@@ -858,6 +885,8 @@ video {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
+=======
+>>>>>>> 6e7b0b8c27adc05ad00a467ea506a5d95e6d4c9b
 }
 
 .text-base {
@@ -899,17 +928,32 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+<<<<<<< HEAD
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+=======
+.photoOverPicture {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  white-space: normal;
+}
+
+@media screen and (max-width: 740px) {
+  .photoOverPicture {
+    top: 100%;
+    margin-top: -45%;
+  }
+>>>>>>> 6e7b0b8c27adc05ad00a467ea506a5d95e6d4c9b
 }
 
 /* animation for title on photo */
 
 @keyframes lights {
   0% {
-    color: hsl(65, 86%, 75%);
+    color: #14b8a6;
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(65, 100%, 60%, 0.3),
@@ -918,7 +962,7 @@ video {
   }
 
   30% {
-    color: hsl(63, 89%, 71%);
+    color: #2dd4bf;
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(56, 100%, 60%, 0.5),
@@ -927,7 +971,7 @@ video {
   }
 
   40% {
-    color: hsl(60, 86%, 62%);
+    color: #5eead4;
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(56, 100%, 60%, 0.5),
@@ -936,7 +980,8 @@ video {
   }
 
   70% {
-    color: hsl(59, 92%, 62%);
+    color: #99f6e4;
+    color: #2dd4bf;
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(61, 100%, 60%, 0.5),
@@ -945,7 +990,7 @@ video {
   }
 
   100% {
-    color: hsl(60, 90%, 75%);
+    color: #14b8a6;
     text-shadow:
         0 0 1em hsla(63, 100%, 50%, 0.2),
         0 0 0.125em hsla(55, 100%, 60%, 0.3),
@@ -955,6 +1000,7 @@ video {
 }
 
 h2 {
+  font-family: Raleway;
   margin: auto;
   animation: lights 4s 750ms linear infinite;
 }
@@ -1051,6 +1097,14 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 }
 
 @media (min-width: 640px) {
+  .sm\:top-1\/2 {
+    top: 50%;
+  }
+
+  .sm\:h-full {
+    height: 100%;
+  }
+
   .sm\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -1059,6 +1113,11 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1070,11 +1129,44 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
   .md\:hidden {
     display: none;
   }
+
+  .md\:h-3\/4 {
+    height: 75%;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .lg\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
