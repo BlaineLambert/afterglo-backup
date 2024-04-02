@@ -4,12 +4,13 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Product(models.Model):
-    name = models.TextField()
+    name = models.CharField(max_length = 24)
     price = models.IntegerField()
-    desc = models.TextField()
+    desc = models.CharField(max_length = 255)
     photo = models.ImageField(upload_to="app/uploads/", null=True, blank=True, default='app/uploads/default.png')
 
 class User(models.Model):
-    name = models.TextField()
+    fname = models.CharField(max_length = 24)
+    lname = models.CharField(max_length = 24)
     email = models.EmailField()
-    number = models.TextField()
+    number = models.CharField(max_length = 10)
