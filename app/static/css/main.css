@@ -825,58 +825,58 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/* animation for title on photo */
+
 @keyframes lights {
   0% {
-    color: hsl(230, 40%, 80%);
+    color: hsl(64, 39%, 80%);
     text-shadow:
-        0 0 1em hsla(320, 100%, 50%, 0.2),
-        0 0 0.125em hsla(320, 100%, 60%, 0.3),
-        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+        0 0 1em hsla(64, 100%, 50%, 0.2),
+        0 0 0.125em hsla(65, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(63, 100%, 60%, 0.204),
+        1em 0.125em 0.5em hsla(60, 100%, 60%, 0.136);
   }
 
   30% {
-    color: hsl(230, 80%, 90%);
+    color: hsl(63, 48%, 78%);
     text-shadow:
-        0 0 1em hsla(320, 100%, 50%, 0.5),
-        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0 0 1em hsla(64, 100%, 50%, 0.2),
+        0 0 0.125em hsla(56, 100%, 60%, 0.5),
         -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+        0.5em 0.125em 0.25em hsla(65, 100%, 60%, 0.4);
   }
 
   40% {
-    color: hsl(230, 100%, 95%);
+    color: hsl(60, 71%, 66%);
     text-shadow:
-        0 0 1em hsla(320, 100%, 50%, 0.5),
-        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        0 0 1em hsla(64, 100%, 50%, 0.2),
+        0 0 0.125em hsla(56, 100%, 60%, 0.5),
         -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
-        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+        0.25em 0.125em 0.125em hsla(60, 100%, 60%, 0.4);
   }
 
   70% {
-    color: hsl(230, 80%, 90%);
+    color: hsl(59, 66%, 55%);
     text-shadow:
-        0 0 1em hsla(320, 100%, 50%, 0.5),
-        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0 0 1em hsla(64, 100%, 50%, 0.2),
+        0 0 0.125em hsla(61, 100%, 60%, 0.5),
         0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
-        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+        -0.5em 0.125em 0.25em hsla(66, 100%, 60%, 0.4);
   }
 
   100% {
-    color: hsl(230, 40%, 80%);
+    color: hsl(60, 96%, 48%);
     text-shadow:
-        0 0 1em hsla(320, 100%, 50%, 0.2),
-        0 0 0.125em hsla(320, 100%, 60%, 0.3),
-        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+        0 0 1em hsla(63, 100%, 50%, 0.2),
+        0 0 0.125em hsla(55, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0.179),
+        -1em 0.125em 0.5em hsla(62, 100%, 60%, 0.178);
   }
 }
 
 h2 {
   margin: auto;
-  font-size: 3.5rem;
-  font-weight: 300;
-  animation: lights 5s 750ms linear infinite;
+  animation: lights 3s 750ms linear infinite;
 }
 
 /* title bar link animations */
