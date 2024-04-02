@@ -42,7 +42,7 @@
                 <div class="-mr-2 flex md:hidden">
                     <!-- Mobile menu button -->
                     <button type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="mobile-menu-button">
-                        <span class="sr-only">Open main menu</span>
+                        <span class="sr-only">Navigation Menu</span>
                         <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -64,13 +64,15 @@
                 <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
                 <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="#" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Products</a>
-                
+                {% comment %} shopping cart alt goes here {% endcomment %}
             </div>
         </div>
     </nav>
 
-    <img class="h-3/5 w-3/5 center" src="static/images/gold-teal-beach.webp" alt="Beach" >
-
+    <div class="flex justify-center ">
+        <img class="h-4/5 w-full p-20 bg-teal-100" src="static/images/gold-teal-beach.webp" alt="Beach" >
+        <h2 class="absolute text-7xl" style="top:50%; left:50%; transform:translate(-50%, -50%);">Looking for a tan?</h2>
+    </div>
     {% block content %}{% endblock %}
 
     {% comment %} footer {% endcomment %}
