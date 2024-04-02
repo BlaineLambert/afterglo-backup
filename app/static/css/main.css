@@ -829,7 +829,7 @@ video {
 
 @keyframes lights {
   0% {
-    color: hsl(64, 39%, 80%);
+    color: hsl(65, 86%, 75%);
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(65, 100%, 60%, 0.3),
@@ -838,7 +838,7 @@ video {
   }
 
   30% {
-    color: hsl(63, 48%, 78%);
+    color: hsl(63, 89%, 71%);
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(56, 100%, 60%, 0.5),
@@ -847,7 +847,7 @@ video {
   }
 
   40% {
-    color: hsl(60, 71%, 66%);
+    color: hsl(60, 86%, 62%);
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(56, 100%, 60%, 0.5),
@@ -856,7 +856,7 @@ video {
   }
 
   70% {
-    color: hsl(59, 66%, 55%);
+    color: hsl(59, 92%, 62%);
     text-shadow:
         0 0 1em hsla(64, 100%, 50%, 0.2),
         0 0 0.125em hsla(61, 100%, 60%, 0.5),
@@ -865,7 +865,7 @@ video {
   }
 
   100% {
-    color: hsl(60, 96%, 48%);
+    color: hsl(60, 90%, 75%);
     text-shadow:
         0 0 1em hsla(63, 100%, 50%, 0.2),
         0 0 0.125em hsla(55, 100%, 60%, 0.3),
@@ -876,7 +876,7 @@ video {
 
 h2 {
   margin: auto;
-  animation: lights 3s 750ms linear infinite;
+  animation: lights 4s 750ms linear infinite;
 }
 
 /* title bar link animations */
