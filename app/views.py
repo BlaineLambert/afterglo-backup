@@ -14,7 +14,6 @@ def testing(request:HttpRequest) -> HttpResponse:
     form1 = CreateUser
     form2 = ListProduct
     if request.method == 'POST':
-        print("hello")
         if 'user' in request.POST:
             form1 = CreateUser(request.POST)
             if form1.is_valid():
@@ -24,11 +23,15 @@ def testing(request:HttpRequest) -> HttpResponse:
             if form2.is_valid():
                 form2.save()
         if 'delete_product' in request.POST:
-            print("hello")
             product_id = request.POST['delete_product']
             product_to_delete = get_object_or_404(Product, id=product_id)
             product_to_delete.delete()
+        if 'delete_user' in request.POST:
+            user_id = request.POST['delete_user']
+            user_to_delete = get_object_or_404(User, id=user_id)
+            user_to_delete.delete()
 
     products = Product.objects.all()
-    context = {'form1': form1, 'form2': form2, 'products': products}
+    users = User.objects.all()
+    context = {'form1': form1, 'form2': form2, 'products': products, 'users': users}
     return render(request, "test.html", context)
