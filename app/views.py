@@ -5,6 +5,54 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
+import openai
+import re
+openai.api_key = "API KEY"
+def is_allowed_question(question):
+    questions = [
+    r"skin",
+    r"skin care",
+    r"lotion",
+    r'tan',
+    r"tanning",
+    r'hello',
+    r'goodbye',
+    r'thank you'
+]
+    for pattern in questions:
+        if re.search(pattern, question, re.IGNORECASE):
+            return True
+    
+    return False
+
+def response(prompt):
+    
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = [{"role":"user", "content": prompt}]
+    )
+    return response.choices[0].message.content.strip()
+
+
+
+def load_main(request: HttpRequest):
+    form = Chatbot_Form()
+    if request.method == "POST":
+        form = Chatbot_Form(request.POST)
+        if form.is_valid():
+            print("something") 
+            user_input = form.cleaned_data["user_input"]
+            if is_allowed_question(user_input):
+                chat_response = response(user_input)
+                context = {"form":form,"response":chat_response}
+                return render(request, 'home.html', {"form":form,"response":chat_response,"user_input":user_input})
+            else:
+                chat_response = "Sorry but im here to answer questions about skin care and tanning"
+                context = {"form":form,"response":chat_response}
+                return render(request, 'home.html', {"form":form,"response":chat_response,"user_input":user_input})
+    else:
+        return render(request, 'home.html')
+
 
 def homePage(request:HttpRequest)->HttpResponse:
     context = {}
