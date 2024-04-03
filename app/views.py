@@ -84,10 +84,26 @@ def testing(request:HttpRequest) -> HttpResponse:
     context = {'form1': form1, 'form2': form2, 'products': products, 'users': users}
     return render(request, "test.html", context)
 
+def personCart(request, item):
+    cart = addToCart(item)
+    return cart
+
+
+
 def products(request):
-    products = Product.objects.all()
-    context = {'products': products}
-    return render(request, "products.html", context)
+    if request.POST:
+        if 'buy-product' in request.POST:
+            product = request.POST['buy-product']
+            productsInCart = personCart(request, product)
+            lengthOfCart = len(productsInCart)
+            print(lengthOfCart)
+            products = Product.objects.all()
+            context = {'products': products, 'lengthOfCart': lengthOfCart}
+            return render(request, "products.html", context)
+    else:
+        products = Product.objects.all()
+        context = {'products': products}
+        return render(request, "products.html", context)
 
 
 def faq(request):
