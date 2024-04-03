@@ -3,13 +3,19 @@
 <div class="flex justify-center">
   <div class="grid grid-cols-3 gap-4">
     {% for product in products %}
-    <section class="bg-red-200 max-w-md m-2 max-h-72 m-10 grid grid-rows-5 rounded-md shadow-md whitespace-normal font-mono">
+    <section class="bg-red-200 max-w-md m-2 max-h-80 m-10 grid grid-rows-5 rounded-md shadow-md whitespace-normal font-mono">
         <div class="flex flex-col items-center justify-between h-full">
             <div class="text-2xl text-center">{{ product.name }}</div>
             <img src="{{ product.photo.url }}" alt="{{ product.name }}" class="h-28">
             <div class="text-center text-2xl">${{ product.price }}</div>
-            <div class="text-center">
+
+
+
+            <div class="text-center p-4">
                 <p>{{ product.desc }}</p>
+            </div>
+            <div class="flex-1">
+                <button name='buy-product' value={{product.id}} class="bg-teal-200 p-1 rounded-lg border-2 border-gray-600 font-mono top-2">Add To Cart</button>
             </div>
         </div>
     </section>
