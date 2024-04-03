@@ -714,8 +714,8 @@ video {
   max-width: 80rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
+.max-w-md {
+  max-width: 28rem;
 }
 
 .grid-cols-3 {
