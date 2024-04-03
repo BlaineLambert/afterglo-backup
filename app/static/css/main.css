@@ -616,12 +616,17 @@ video {
   left: 0.75rem;
 }
 
+<<<<<<< HEAD
+.top-1\/2 {
+  top: 50%;
+=======
 .m-10 {
   margin: 2.5rem;
 }
 
 .m-2 {
   margin: 0.5rem;
+>>>>>>> 89d0b4e8bdc689dde0cd43a504b21a7541a3acf5
 }
 
 .mx-auto {
@@ -686,12 +691,17 @@ video {
   height: 1.5rem;
 }
 
+<<<<<<< HEAD
+.w-1\/2 {
+  width: 50%;
+=======
 .h-full {
   height: 100%;
 }
 
 .max-h-72 {
   max-height: 18rem;
+>>>>>>> 89d0b4e8bdc689dde0cd43a504b21a7541a3acf5
 }
 
 .w-2 {
@@ -714,8 +724,22 @@ video {
   max-width: 80rem;
 }
 
+<<<<<<< HEAD
 .max-w-md {
   max-width: 28rem;
+=======
+<<<<<<< HEAD
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+=======
+.max-w-sm {
+  max-width: 24rem;
+>>>>>>> e53ed469e5029a9ba78f3e3d42c84f8c325f18a9
 }
 
 .grid-cols-3 {
@@ -728,6 +752,7 @@ video {
 
 .flex-col {
   flex-direction: column;
+>>>>>>> 89d0b4e8bdc689dde0cd43a504b21a7541a3acf5
 }
 
 .flex-wrap {
@@ -886,6 +911,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -926,7 +956,6 @@ video {
 @media screen and (max-width: 740px) {
   .photoOverPicture {
     top: 100%;
-    margin-top: -45%;
   }
 }
 
@@ -1082,8 +1111,8 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
     top: 50%;
   }
 
-  .sm\:h-full {
-    height: 100%;
+  .sm\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .sm\:px-3 {
@@ -1096,9 +1125,9 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
     padding-right: 1.5rem;
   }
 
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -1109,10 +1138,6 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:h-3\/4 {
-    height: 75%;
   }
 
   .md\:text-3xl {
@@ -1146,8 +1171,30 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 }
 
 @media (min-width: 1280px) {
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .xl\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .\32xl\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
