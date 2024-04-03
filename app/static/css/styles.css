@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* gold metallic looks */
+.metallic-gold {
+  background: linear-gradient(145deg, #d4af37, #ffdf00, #d4af37);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+              inset 0 1px 4px rgba(255, 255, 255, 0.3), 
+              inset 0 -1px 4px rgba(255, 255, 255, 0.2);
+}
+.metallic-gold-trans {
+  background: linear-gradient(145deg, #d4af377c, #ffdd007c, #d4af377f);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+              inset 0 1px 4px rgba(255, 255, 255, 0.3), 
+              inset 0 -1px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* header font */
+.fontRale{
+  font-family: Raleway;
+}
+
 /* animation for title on photo */
 @keyframes lights {
     0% {
