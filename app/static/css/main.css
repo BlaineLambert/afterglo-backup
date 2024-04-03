@@ -725,6 +725,10 @@ video {
 }
 
 <<<<<<< HEAD
+.max-w-md {
+  max-width: 28rem;
+=======
+<<<<<<< HEAD
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -735,6 +739,7 @@ video {
 =======
 .max-w-sm {
   max-width: 24rem;
+>>>>>>> e53ed469e5029a9ba78f3e3d42c84f8c325f18a9
 }
 
 .grid-cols-3 {
