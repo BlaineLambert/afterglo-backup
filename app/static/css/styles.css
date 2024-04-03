@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.photoOverPicture {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  white-space: normal;
-}
-
-@media screen and (max-width: 740px) {
-  .photoOverPicture {
-    top: 100%;
-  }
-}
-
-
 /* animation for title on photo */
 @keyframes lights {
     0% {
