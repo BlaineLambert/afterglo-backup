@@ -22,12 +22,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homePage, name="home"),
     path('testing-db/', testing),
-    path('products/', products, name="products"),
-    path('payment/', payment_packages, name="paymentpackages"),
+
+    path('', homePage, name="home"),
     path('faq/', faq, name="faq"),
-    path('blog/', blog, name="blog")
+    path('blog/', blog, name="blog"),
+    path('packages/', payment_packages, name="paymentpackages"),
+    path('products/', products, name="products")
 ]
 
 if settings.DEBUG:
