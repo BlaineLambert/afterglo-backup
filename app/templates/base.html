@@ -76,29 +76,45 @@
     {% block content %}{% endblock %}
 
     {% comment %} footer {% endcomment %}
-    <footer class="bg-teal-100 py-5 mt-auto">
+    <footer class="bg-sand py-5 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-around items-center">
                 <div class="text-sm text-gray-500">
+                    <img class="h-36 w-36" src="{% static 'images/newAfterGlo-logo-morefixes.svg' %}" alt="Logo" >
                     © 2024 After Glo. All rights reserved.
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Terms of Service</a>
-                    <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Contact Us</a>
+                <div class="flex flex-col justify-center">
+                    <div class="flex space-x-6">
+                        <a href="{% url 'home' %}" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Home</a>
+                        <a href="{% url 'blog' %}" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Blog</a>
+                        <a href="{% url 'faq' %}" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">FAQ</a>
+                        <a href="{% url 'paymentpackages' %}" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Services</a>
+                        <a href="{% url 'products' %}" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Products</a>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-teal-300 px-3 my-2 text-sm font-medium">Contact Us</a>
+                    </div>
                 </div>
-                <div class="flex space-x-4">
-                    <!-- social media links -->
-                    <a href="#" class="text-gray-500 hover:text-teal-300">
-                        <img src="{% static 'images/gold-logo.png' %}" alt="Social Media Icon" class="h-6 w-6">
-                    </a>
-                    
+                <div>
+                    <p class="text-gray-500 text-sm font-medium mb-2">Come Follow Us!</p>
+                    <div class="flex space-x-4">
+                        <!-- social media links -->
+                        <a href="#" class="text-gray-500 hover:text-teal-300">
+                            <img class="w-8 h-8" src="{% static 'images/facebook.png' %}" alt="Facebook">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-teal-300">
+                            <img class="w-8 h-8" src="{% static 'images/instagram.png' %}" alt="Instagram">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-    
+    </footer>    
     
 </body>
 </html>
+
+
 
