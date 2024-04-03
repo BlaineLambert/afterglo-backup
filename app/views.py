@@ -91,15 +91,18 @@ def personCart(request, item):
 
 
 def products(request):
-    if request.POST:
-        if 'buy-product' in request.POST:
-            product = request.POST['buy-product']
-            productsInCart = personCart(request, product)
-            lengthOfCart = len(productsInCart)
-            print(lengthOfCart)
-            products = Product.objects.all()
-            context = {'products': products, 'lengthOfCart': lengthOfCart}
-            return render(request, "products.html", context)
+    if request.method == "POST":
+        product_id = request.POST.get('buy-product')
+        quantity = int(request.POST.get('quantity', 1))  
+        if 'cart' not in request.session or not request.session['cart']:
+            request.session['cart'] = {}
+        cart = request.session['cart']
+        if product_id in cart:
+            cart[product_id] += quantity
+        else:
+            cart[product_id] = quantity
+        request.session.modified = True
+        return redirect('products')  
     else:
         products = Product.objects.all()
         context = {'products': products}
