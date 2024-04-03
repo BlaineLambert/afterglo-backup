@@ -91,7 +91,19 @@ def products(request):
 
 
 def faq(request):
-    return render(request, "faq.html")
+    faqs = [
+        {'question': 'How does indoor tanning work?', 'answer': 'Indoor tanning involves using a device that emits ultraviolet radiation to produce a cosmetic tan.'},
+        {'question': 'Is indoor tanning safe?', 'answer': 'While indoor tanning can help simulate natural sunlight, it\'s important to use it responsibly to minimize skin damage.'},
+        {'question': 'What should I wear for tanning?', 'answer': 'Most people wear swimwear. It\'s important to protect sensitive areas that aren\'t usually exposed to the sun.'},
+        {'question': 'How long should my tanning session be?', 'answer': 'Session length can vary depending on your skin type and the intensity of the tanning bed. It\'s best to start with shorter sessions and gradually increase the time.'},
+        {'question': 'How can I extend the life of my tan?', 'answer': 'Moisturizing your skin regularly can help extend the duration of your tan. Drinking plenty of water also helps.'},
+    ]
+
+    context = {
+        "faqs":faqs
+    }
+    
+    return render(request, "faq.html", context)
 
 def blog(request):
     return render(request, "blog.html")
