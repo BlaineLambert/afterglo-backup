@@ -87,7 +87,6 @@ def testing(request:HttpRequest) -> HttpResponse:
 
 
 def products(request):
-<<<<<<< HEAD
     if request.method == "POST":
         product_id = request.POST.get('buy-product')
         quantity = int(request.POST.get('quantity', 1))  
@@ -100,19 +99,10 @@ def products(request):
             cart[product_id] = quantity
         request.session.modified = True
         return redirect('products')  
-=======
-    if request.POST:
-        if 'buy-product' in request.POST:
-            product = request.POST['buy-product']
-            products = Product.objects.all()
-            context = {'products': products}
-            return render(request, "products.html", context)
->>>>>>> 4983da3ee9af0f61c1754bc471390c4009cb493b
     else:
         products = Product.objects.all()
         context = {'products': products}
         return render(request, "products.html", context)
-
 
 def faq(request):
     faqs = [
