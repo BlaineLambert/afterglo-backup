@@ -88,3 +88,13 @@ def products(request):
     products = Product.objects.all()
     context = {'products': products}
     return render(request, "products.html", context)
+
+
+def faq(request):
+    return render(request, "faq.html")
+
+def blog(request):
+    return render(request, "blog.html")
+
+def payment_packages(request):
+    return render(request, "payment_packages.html")
