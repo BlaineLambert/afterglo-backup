@@ -44,14 +44,15 @@ def load_main(request: HttpRequest):
             user_input = form.cleaned_data["user_input"]
             if is_allowed_question(user_input):
                 chat_response = response(user_input)
-                context = {"form":form,"response":chat_response}
+                context = {"form":form,"response":chat_response,'itemsInCart':itemsInCart}
                 return render(request, 'home.html', {"form":form,"response":chat_response,"user_input":user_input})
             else:
                 chat_response = "Sorry but im here to answer questions about skin care and tanning"
-                context = {"form":form,"response":chat_response}
+                context = {"form":form,"response":chat_response,'itemsInCart':itemsInCart}
                 return render(request, 'home.html', {"form":form,"response":chat_response,"user_input":user_input})
     else:
-        return render(request, 'home.html')
+        context = {}
+        return render(request, 'home.html', context)
 
 
 def homePage(request:HttpRequest)->HttpResponse:
@@ -84,13 +85,9 @@ def testing(request:HttpRequest) -> HttpResponse:
     context = {'form1': form1, 'form2': form2, 'products': products, 'users': users}
     return render(request, "test.html", context)
 
-def personCart(request, item):
-    cart = addToCart(item)
-    return cart
-
-
 
 def products(request):
+<<<<<<< HEAD
     if request.method == "POST":
         product_id = request.POST.get('buy-product')
         quantity = int(request.POST.get('quantity', 1))  
@@ -103,6 +100,14 @@ def products(request):
             cart[product_id] = quantity
         request.session.modified = True
         return redirect('products')  
+=======
+    if request.POST:
+        if 'buy-product' in request.POST:
+            product = request.POST['buy-product']
+            products = Product.objects.all()
+            context = {'products': products}
+            return render(request, "products.html", context)
+>>>>>>> 4983da3ee9af0f61c1754bc471390c4009cb493b
     else:
         products = Product.objects.all()
         context = {'products': products}
@@ -125,7 +130,13 @@ def faq(request):
     return render(request, "faq.html", context)
 
 def blog(request):
-    return render(request, "blog.html")
+    context = {
+
+    }
+    return render(request, "blog.html", context)
 
 def payment_packages(request):
-    return render(request, "payment_packages.html")
+    context = {
+
+    }
+    return render(request, "payment_packages.html", context)
