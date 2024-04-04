@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom scroll bar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; 
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* background color */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* color */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* hover */
+}
 
 /* gold metallic looks */
 .metallic-gold {
