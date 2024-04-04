@@ -15,8 +15,8 @@
                 <p id="desc_full_{{ product.id }}" class="description" style="display: none;">{{ product.desc }}</p>
                 <button onclick="toggleDescription({{ product.id }})" type="button" id="button_{{ product.id }}" class="text-blue-600 underline">View More</button>
             </div>
-            <div class="flex-1 mb-5 text-left">
-                <button name='buy-product' value={{product.name}} class="bg-teal-200 p-1 rounded-lg border-2 border-gray-600 font-mono top-2">Add To Cart</button>
+            <div class="flex-1 mb-5 absolute">
+              <button name='buy-product' value={{product.name}} class="bg-teal-200 p-1 rounded-lg border-2 border-gray-600 font-mono top-2 mt-80">Add To Cart</button>
             </div>
         </div>
       </form>
