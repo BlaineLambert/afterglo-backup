@@ -3,18 +3,20 @@
 <div class="flex justify-center">
   <div class="grid grid-cols-3 gap-4">
     {% for product in products %}
-    <section class="bg-red-200 max-w-md m-2 max-h-80 m-10 grid grid-rows-5 rounded-md shadow-md whitespace-normal font-mono">
+    <section class="bg-red-200 max-w-md m-2 max-h-96 m-10 grid grid-rows-5 rounded-md shadow-md whitespace-normal font-mono">
       <form method='POST' action=''>
         {% csrf_token %}
-        <div class="flex flex-col items-center justify-between h-full">
-            <div class="text-2xl text-center">{{ product.name }}</div>
+        <div class="flex flex-col justify-between h-full items-center">
+            <div class="text-xl text-center">{{ product.name }}</div>
             <img src="{{ product.photo.url }}" alt="{{ product.name }}" class="h-28">
             <div class="text-center text-2xl">${{ product.price }}</div>
-            <div class="text-center p-4">
-                <p>{{ product.desc }}</p>
+            <div class="text-left p-4">
+                <p id="desc_truncated_{{ product.id }}" class="description">{{ product.desc|truncatewords:13 }}</p>
+                <p id="desc_full_{{ product.id }}" class="description" style="display: none;">{{ product.desc }}</p>
+                <button onclick="toggleDescription({{ product.id }})" type="button" id="button_{{ product.id }}" class="text-blue-600 underline">View More</button>
             </div>
-            <div class="flex-1">
-                <button name='buy-product' value={{product.name}} class="bg-teal-200 p-1 rounded-lg border-2 border-gray-600 font-mono top-2">Add To Cart</button>
+            <div class="flex-1 mb-5 absolute">
+              <button name='buy-product' value={{product.name}} class="bg-teal-200 p-1 rounded-lg border-2 border-gray-600 font-mono top-2 mt-80">Add To Cart</button>
             </div>
         </div>
       </form>
@@ -22,4 +24,23 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+function toggleDescription(productId) {
+    var truncatedDesc = document.getElementById("desc_truncated_" + productId);
+    var fullDesc = document.getElementById("desc_full_" + productId);
+    var buttonText = document.getElementById("button_" + productId);
+    
+    if (truncatedDesc.style.display === "none") {
+        truncatedDesc.style.display = "block";
+        fullDesc.style.display = "none";
+        buttonText.innerHTML = "View More";
+    } else {
+        truncatedDesc.style.display = "none";
+        fullDesc.style.display = "block";
+        buttonText.innerHTML = "View Less";
+    }
+}
+</script>
+
 {% endblock content %}
