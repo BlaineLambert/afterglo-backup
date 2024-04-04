@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        beachGrass:'#c8e7b0',
         sand:'#f5f5dc',
         gold: '#ffd700',
         skin: {

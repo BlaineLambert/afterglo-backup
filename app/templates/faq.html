@@ -1,57 +1,63 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="flex justify-center mt-5">
-    <div class="flex justify-center mt-5 metallic-gold rounded pl-2 pr-2 pb-2">
+    <div class="flex justify-center mt-5 teal-500 rounded pl-2 pr-2 pb-2">
         <h1 class="fontRale lg:text-7xl md:text-4xl sm:text-xl">Frequently Asked Questions:</h1>
     </div>
 </div>
-<div class="text-center ml-5 mr-5 font-sanes">
+<div class="bg-beachGrass text-center ml-5 mr-5 font-sanes">
     <div id="accordion" class="my-5 space-y-2">
+{% comment %} 1 {% endcomment %}
         <div class="accordion-item">
-            <button class="accordion-button bg-skin-lightest p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
+            <button class="accordion-button bg-teal-100 p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
                 Accordion Item #1
             </button>
-            <div class="accordion-content bg-skin-lightest p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+            <div class="accordion-content bg-teal-100 p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
                 <div class="p-4">
                     Content for Item #1.
                 </div>
             </div>
         </div>
+{% comment %} 2 {% endcomment %}
         <div class="accordion-item">
-            <button class="accordion-button bg-skin-light p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
+            <button class="accordion-button bg-teal-200 p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
                 Accordion Item #2
             </button>
-            <div class="accordion-content bg-skin-light p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+            <div class="accordion-content bg-teal-200 p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
                 <div class="p-4">
                     Content for Item #2.
                 </div>
             </div>
         </div>
+{% comment %} 3 {% endcomment %}
         <div class="accordion-item">
-            <button class="accordion-button bg-skin-medium p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
+            <button class="accordion-button bg-teal-300 p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
                 Accordion Item #3
             </button>
-            <div class="accordion-content bg-skin-medium p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+            <div class="accordion-content bg-teal-300 p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
                 <div class="p-4">
                     Content for Item #3.
                 </div>
             </div>
         </div>
+{% comment %} 4 {% endcomment %}
         <div class="accordion-item">
-            <button class="accordion-button bg-skin-dark p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
+            <button class="accordion-button bg-teal-400 p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
                 Accordion Item #4
             </button>
-            <div class="accordion-content bg-skin-dark p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+            <div class="accordion-content bg-teal-400 p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
                 <div class="p-4">
                     Content for Item #4.
                 </div>
             </div>
         </div>
+{% comment %} 5 {% endcomment %}
         <div class="accordion-item">
-            <button class="accordion-button bg-skin-darkest p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
+            <button class="accordion-button bg-teal-500 p-4 w-full text-left transition duration-300 ease-in-out focus:outline-none" type="button">
                 Accordion Item #5
             </button>
-            <div class="accordion-content bg-skin-darkest p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
+            <div class="accordion-content bg-teal-500 p-0 transition-all duration-500 ease-in-out max-h-0 overflow-hidden">
                 <div class="p-4">
                     Content for Item #5.
                 </div>
@@ -59,6 +65,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock content %}
