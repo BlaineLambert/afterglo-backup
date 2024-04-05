@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="flex justify-center">
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     {% for product in products %}
     <section class="bg-teal-100 max-w-md m-2 max-h-96 m-10 grid grid-rows-5 rounded-md shadow-md whitespace-normal font-mono">
       <form method='POST' action=''>
